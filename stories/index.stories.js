@@ -16,6 +16,15 @@ storiesOf("RelativeTimeLabel", module)
           unit="day"
           from={new Date(fromDate)}
           to={now}
+          style={{
+            backgroundColor: "#ddd",
+            borderRadius: ".25rem",
+            color: "#333",
+            display: "inline-block",
+            fontFamily: "sans-serif",
+            lineHeight: 1,
+            padding: ".5rem .5rem"
+          }}
         />
         <p style={{ color: "#999" }}>
           {now.toLocaleDateString()} to {fromDate}
