@@ -1,0 +1,152 @@
+{
+  "name": "react-relative-time-label",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "react",
+    "javascript",
+    "relative time",
+    "label",
+    "es2015"
+  ],
+  "main": "dist/react-rtl.cjs.js",
+  "jsnext:main": "dist/react-rtl.esm.js",
+  "module": "dist/react-rtl.esm.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "dist"
+  ],
+  "repository": "https://github.com/geoffdavis92/react-relative-time-label.git",
+  "author": "Geoff Davis <geoffdavis92@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^4.0.12",
+    "@storybook/addon-links": "^4.0.12",
+    "@storybook/addons": "^4.0.12",
+    "@storybook/react": "^4.0.12",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.11",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^23.6.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^5.3.1",
+    "typescript": "^3.2.2",
+    "uglify-es": "^3.3.9"
+  },
+  "dependencies": {
+    "@types/prop-types": "^15.5.7",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "scripts": {
+    "build": "NODE_ENV=rollup ./node_modules/.bin/rollup -c --bundle && yarn test",
+    "build:storybook": "build-storybook",
+    "clean": "rm -r dist/* .rpt2_cache/*",
+    "prettier": "./node_modules/.bin/prettier {.,src,stories,__tests__}/*.{js,json} --write",
+    "rollup": "NODE_ENV=rollup ./node_modules/.bin/rollup -c",
+    "start": "NODE_ENV=rollup ./node_modules/.bin/rollup -c --watch",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest -u",
+    "test:watch": "jest -u --watch",
+    "build-storybook": "build-storybook"
+  },
+  "babel": {
+    "env": {
+      "rollup": {
+        "presets": [
+          [
+            "@babel/env",
+            {
+              "modules": false,
+              "targets": {
+                "browsers": [
+                  "last 2 versions"
+                ]
+              }
+            }
+          ],
+          "@babel/react"
+        ],
+        "plugins": [
+          "transform-class-properties",
+          "transform-object-rest-spread"
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "@babel/env",
+            {
+              "targets": {
+                "browsers": [
+                  "last 2 versions"
+                ]
+              }
+            }
+          ],
+          "@babel/react"
+        ],
+        "plugins": [
+          "transform-class-properties"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "dist"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "__tests__/__*"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "parser": "flow",
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "useTabs": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"module": "es2015",
+		"target": "es6",
+		"noImplicitAny": false,
+		"sourceMap": true,
+		"inlineSourceMap": false,
+		"jsx": "react",
+		"moduleResolution": "node",
+		"baseUrl": "./src",
+		"paths": {
+			"classes/*": ["./src/classes"],
+			"functions/*": ["./src/functions"],
+			"helpers/*": ["./src/helpers"],
+			"types/*": ["./src/types"]
+		}
+	},
+	"include": [
+		"./src/*"
+	],
+	"exclude": [
+		"__tests__",
+		"node_modules",
+		"rollup.config.js"
+	]
+}

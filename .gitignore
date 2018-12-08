@@ -1,0 +1,10 @@
+# react-relative-time-label ignores... 
+.rpt2_cache 
+dist/ 
+node_modules/ 
+*-error 
+*.lock 
+*-lock.json 
+*.log 
+*.lock 
+.DS_Store
